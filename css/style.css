@@ -1,0 +1,235 @@
+/* Resetting default padding, margin, and box-sizing for all elements */
+*{
+    padding: 0; /* Setting padding to 0 */
+    margin: 0; /* Setting margin to 0 */
+    box-sizing: border-box; /* Setting box-sizing to border-box */
+}
+
+/* Setting body text color and background color */
+body {
+    color: black !important; /* Setting text color */
+    background-color: #ffb74d; /* Setting background color */
+}
+
+/* Styling for an element with class 'img-name' */
+.img-name{
+    background-image: url(/pictures/studiogibli.gif); /* Setting background image */
+    background-position: center; /* Centering background image */
+    background-repeat: no-repeat, repeat; /* Preventing repetition */
+    background-size: cover; /* Scaling background image to cover the element */
+    height: 500px; /* Setting height */
+}
+
+/* Styling for an element with class 'nav-back' */
+.nav-back{
+    background-color:  #ffb74d; /* Setting background color */
+}
+
+/* Styling for all h1 elements */
+h1{
+    text-align: center; /* Centering text */
+    color:black; /* Setting text color */
+}
+
+/* Styling for an element with class 'contanier' */
+.contanier {
+    background-image: url("/pictures/back2.jpg"); /* Setting background image */
+    height: 100vh; /* Setting height to 100% of viewport height */
+    width: 100% !important; /* Setting width to 100% */
+    background-position: center; /* Centering background image */
+    background-repeat: no-repeat; /* Preventing repetition */
+    background-size: cover; /* Scaling background image to cover the entire element */
+    position: relative; /* Setting position relative */
+}
+
+/* Styling for an element with class 'w-50' */
+.w-50 {
+    backdrop-filter: blur(20px); /* Applying backdrop filter to create a blur effect */
+    background-blend-mode: color-dodge; /* Setting background blend mode */
+    width: 30% !important; /* Setting width to 30% */
+    position: absolute !important; /* Positioning element absolutely */
+    top: 120px; /* Positioning from the top */
+    border: 2px solid #ffa726 !important; /* Setting border */
+    border-radius: 10px; /* Setting border radius */
+    left: 35%; /* Positioning from the left */
+}
+
+/* Styling for an element with class 'form-label' */
+.form-label {
+    font-weight: 700; /* Setting font weight */
+}
+
+/* Styling for buttons with class 'btn-success':*/
+.btn-success {
+    background-color: #ffa726 !important; /* Sets background color */
+    border: none !important; /* Removes button border */
+    width: 100px; /* Sets width to 100px */
+}
+
+/*Styling for buttons with class 'btn-storage':*/
+.btn-storage {
+    background-color: #ffa726 !important; /* Sets background color */
+    border: none !important; /* Removes button border */
+    width: 100px; /* Sets width to 100px */
+    border-radius: 10px; /* Applies border radius of 10px */
+}
+
+/*Styling for buttons with class 'btn-type':*/
+.btn-type {
+    background-color: white !important; /* Sets background color */
+    border: none !important; /* Removes button border */
+    width:fit-content; /* Sets width to 100px */
+    border-radius: 10px; /* Applies border radius of 10px */
+}
+
+
+
+/*Additional styling for element with class 'w-50':*/
+.w-50 {
+    margin-left: auto; /* Centers the element horizontally */
+    margin-right: auto; /* Centers the element horizontally */
+    backdrop-filter: blur(20px); /* Applies a backdrop filter with blur effect */
+    background-blend-mode: color-dodge; /* Blends background color with dodge mode */
+    width: 40% !important; /* Sets width to 40% */
+    position: absolute !important; /* Positions element absolutely */
+    top: 120px; /* Sets top offset to 120px */
+    border: 2px solid #ffa726 !important; /* Applies border with a shade of orange */
+    border-radius: 10px; /* Applies border radius of 10px */
+    left: 30%; /* Sets left offset to 30% */
+}
+
+/*Styling for an element with class 'w-50-2':*/
+.w-50-2 {
+    background-color: #ffb74d; /* Sets background color */
+    backdrop-filter: blur(20px); /* Applies a backdrop filter with blur effect */
+    background-blend-mode: color-dodge; /* Blends background color with dodge mode */
+    width: 40% !important; /* Sets width to 40% */
+    position: fixed !important; /* Positions element fixedly */
+    top: 50%; /* Vertically centers the element */
+    left: 50%; /* Horizontally centers the element */
+    transform: translate(-50%, -50%); /* Horizontally and vertically centers the element */
+    border: 2px solid #ffa726 !important; /* Applies border with a shade of orange */
+    border-radius: 10px; /* Applies border radius of 10px */
+}
+
+/* Styling for a container with class 'button-container' */
+.button-container {
+    display: flex; /* Setting display property to flex */
+    justify-content: center; /* Centering flex items along the main axis */
+    gap: 10px; /* Specifying the gap between flex items */
+}
+
+/* Media query for screens with a maximum width of 600px */
+@media only screen and (max-width: 600px) {
+    /* Adjusting width and position for elements with class 'w-50' */
+    .w-50 {
+        width: 100% !important; /* Setting width to 100% */
+        left: 0 !important; /* Positioning the element to the left */
+    }
+}
+
+/* Media query for screens with a maximum width of 600px */
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    [class*="navbar clr-nav2"] {
+        width: 100%; /* Setting width to 100% */
+    }
+}
+
+/* Media query for screens with a maximum width of 600px */
+@media only screen and (max-width: 600px) {
+    /* Adjusting width and position for elements with class 'w-50-2' */
+    .w-50-2 {
+        width: 100% !important; /* Setting width to 100% */
+        left: 50% !important; /* Positioning the element to the center */
+    }
+}
+
+/* Styling for elements with class 'clr-nav' */
+.clr-nav{
+    background-color:#fbd1d3 !important; /* Setting background color */
+    color: rgb(250, 250, 250); /* Setting text color */
+}
+
+/* Styling for elements with class 'clr-abc' */
+.clr-abc{
+    background-color:#ffb74d !important; /* Setting background color */
+}
+
+/* Styling for elements with class 'clr-123' */
+.clr-123{
+    background-color:#ffb74d !important; /* Setting background color */
+}
+
+/* Styling for elements with class 'clr-45' */
+.clr-45{
+    background-color:#ffa726 !important; /* Setting background color */
+}
+
+/* Styling for elements with class 'clr-PM' */
+.clr-PM{
+    background-color:#ffa726!important; /* Setting background color */
+}
+
+/* Hover effect for elements with class 'nav-item' */
+.nav-item:hover{
+    background-color: #ffa726; /* Setting background color on hover */
+    color: black; /* Changing text color on hover */
+}
+
+/* Styling for elements with class 'contact' */
+.contact{
+    height: 70vh; /* Setting height */
+    width: 100% !important; /* Setting width to 100% */
+    background-position: center; /* Centering background image */
+    background-repeat: no-repeat; /* Preventing background image from repeating */
+    background-size: cover; /* Scaling background image to cover the entire element */
+    position: relative; /* Setting position relative */
+}
+
+/* Styling for elements with class 'table' */
+.table{
+    border: 50px solid #ffb74d; /* Setting border */
+}
+
+@media only screen and (max-width: 570px) {
+    /* Adjusting width and position for elements with class 'w-50-2' */
+    .table{
+        display: grid;
+        border: 0px solid #ffb74d;        
+    }
+}
+
+/* Styling for elements with class 'button-contact' */
+.button-contact {
+    background-color: #ffa726 !important; /* Setting background color */
+    border: none !important; /* Removing border */
+    width: 200px; /* Setting width */
+    height: 30px; /* Setting height */
+    border-radius: 10px; /* Setting border radius */
+    display: flex; /* Displaying flex items */
+    justify-content: center; /* Centering content along the main axis */
+    margin-left: auto; /* Setting left margin to auto */
+    margin-right: auto;  /* Setting right margin to auto */
+}
+
+/* Styling for elements with class 'findscroll' */
+.findscroll{
+    overflow: auto; /* Adding scrollbars when content overflows */
+}
+
+
+/* Styling for elements with class 'w-50-3' */
+.w-50-3 {
+    background-color: #ffb74d; /* Setting background color */
+    backdrop-filter: blur(20px); /* Applying backdrop filter to create a blur effect */
+    background-blend-mode: color-dodge; /* Setting background blend mode */
+    width: 40% !important; /* Setting width to 40% */
+    height: 80%; /* Setting height to 80% of the viewport height */
+    position: fixed !important; /* Setting position to fixed */
+    top: 50%; /* Positioning the element vertically at 50% from the top */
+    left: 50%; /* Positioning the element horizontally at 50% from the left */
+    transform: translate(-50%, -50%); /* Translating the element to center */
+    border: 2px solid #ffa726 !important; /* Setting border */
+    border-radius: 10px; /* Setting border radius */
+}

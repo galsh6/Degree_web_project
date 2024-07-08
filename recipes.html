@@ -1,0 +1,137 @@
+<!DOCTYPE html> <!-- Define document type as HTML5 -->
+<html lang="en"> <!-- Begin HTML document with English language -->
+<head> <!-- Head section containing metadata and external resources -->
+
+    <meta charset="utf-8"> <!-- Character encoding set to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive viewport settings -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- Link to Bootstrap CSS -->
+
+    <title>Recipes</title> <!-- Title of the webpage -->
+    <link href="/css/style.css" rel="stylesheet"> <!-- Link to custom CSS stylesheet -->
+</head>
+<body style="position: relative;"> <!-- Body of the webpage -->
+
+<nav class="nav-back navbar navbar-expand-lg navbar-light fixed-top"> <!-- Navigation bar section -->
+  <div> <!-- Navbar brand logo -->
+    <a class="navbar-brand" href="/index.html">
+      <img src="/pictures/logo.png" alt="Logo" style="width:40px;" class="rounded-pill">
+    </a>
+  </div>
+  <div> <!-- Navbar toggle button -->
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03"> <!-- Navbar collapsible content -->
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- Navbar items -->
+      <li class="nav-item">
+        <a class="nav-link" href="/storage.html">Storage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact.html">Contact</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="/HTML/user_settings.html">User Settings</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link active" href="/recipes.html">Recipes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="login.html">Logout</a>
+      </li>
+    </ul>
+    <div class="col-sm-7"> <!-- Logo and title section -->
+      <h3>PHOTOMEAL</h3>
+    </div>
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<!-- Container for Add Recipe and Find Recipe buttons -->
+<div class="container mt-3" style="bottom: 0;">
+  <button type="button" class="btn-type" data-bs-toggle="modal" data-bs-target="#addrecipe">Add Recipe</button> <!-- Button to trigger modal for adding a recipe -->
+  <button type="button" onclick="openfind()" class="btn-type" data-bs-toggle="modal" data-bs-target="#findrecipe">Find New Recipe</button> <!-- Button to trigger modal for finding a recipe -->
+</div>
+
+<!-- Container for displaying recipes -->
+<div class="container mt-3">
+  <div id="accordion"> <!-- Accordion container for dynamic content -->
+    <div class="card"> <!-- Card for displaying recipes -->
+      <div class="card-header d-flex justify-content-between">
+        <h3>
+          My Recipes
+        </h3>
+        <form class="d-flex">
+          <input id="search" class="form-control me-2" type="text" placeholder="Search" oninput="display()">
+        </form>
+      </div>
+      <div class="container mt-5">
+        <div id="recipes_list"></div> <!-- Placeholder for displaying recipe list -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for adding a recipe -->
+<div class="modal" id="addrecipe">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div>
+        <form class="w-50-2 py-5 shadow p-4"> <!-- Form for adding a recipe -->
+          <h3 class="text-white">Add Recipe</h3><hr>
+          <div class="mb-3">
+            <label for="new_name" class="form-label">Recipe Name</label>
+            <input class="form-control" id="new_name" placeholder="Enter Recipe Name">
+          </div>
+          <div class="mb-3">
+            <label for="new_ingredients" class="form-label">Ingredients</label>
+            <textarea class="form-control" id="new_ingredients" rows="8" cols="50" placeholder="Enter Ingredients"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="new_directions" class="form-label">Directions</label>
+            <textarea class="form-control" id="new_directions" rows="8" cols="50" placeholder="Enter Directions"></textarea>
+          </div>
+          <div class="mb-3 d-flex">
+            <div class="button-container">
+              <button type="button" class="btn-storage" onclick="addrecipe()">Submit</button>
+              <button type="button" class="btn-storage" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for finding a recipe -->
+<div class="modal" id="findrecipe">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form class="w-50-2 findscroll py-5 shadow p-4" id="findform"> <!-- Form for finding a recipe -->
+        <h3 class="text-white" id="findtitale">Which ingredients to use?</h3><hr>
+        <div id="showfind"></div> <!-- Container for displaying found recipes -->
+        <div class="mb-3 d-flex">
+          <div class="button-container">
+            <button type="button" class="btn-storage" onclick="findrecipe()" id="findsub">Submit</button>
+            <button type="button" class="btn-storage" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="viewrecipe"></div> <!-- Placeholder for viewing a recipe -->
+<div id="editrecipe"></div> <!-- Placeholder for editing a recipe -->
+
+<!-- JavaScript libraries and custom scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> <!-- Bootstrap JS -->
+<script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script> <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database-compat.js"></script> <!-- Firebase Database -->
+<script src="../js/recipes.js"></script> <!-- Custom recipes JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

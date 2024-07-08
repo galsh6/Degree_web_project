@@ -1,0 +1,104 @@
+<!DOCTYPE html> <!-- Define document type as HTML5 -->
+<html lang="en"> <!-- Begin HTML document with English language -->
+<head> <!-- Head section containing metadata and external resources -->
+
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    
+    <!-- Link to Bootstrap CSS library from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+
+    <title>Contact</title> <!-- Title of the webpage -->
+    
+    <!-- Link to custom CSS stylesheet -->
+    <link href="/css/style.css" rel="stylesheet"> 
+</head>
+<body>
+
+<!-- Navigation bar section -->
+<nav class="nav-back navbar navbar-expand-lg navbar-light fixed-top">
+  <div> <!-- Navbar brand logo -->
+    <a class="navbar-brand" href="/index.html">
+      <img src="/pictures/logo.png" alt="Logo" style="width:40px;" class="rounded-pill">
+    </a>
+  </div>
+  <div> <!-- Navbar toggle button -->
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03"> <!-- Navbar collapsible content -->
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- Navbar items -->
+      <li class="nav-item">
+        <a class="nav-link" href="/storage.html">Storage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/contact.html">Contact</a>
+      </li>
+      <!-- <li class="nav-item">
+          <a class="nav-link" href="/HTML/user_settings.html">User Settings</a>
+        </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="/recipes.html">Recipes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="login.html">Logout</a>
+      </li>
+    </ul>
+    <div class="col-sm-7"> <!-- Logo and title section -->
+      <h3>PHOTOMEAL</h3>
+    </div>
+  </div>
+</nav>
+
+<!-- Video element for displaying a contact video -->
+<video class="contact" controls>
+  <source src="/pictures/video.mp4" type="video/mp4"> <!-- Video source -->
+  Your browser does not support the video tag.
+</video>
+
+<div class="mt-5"> <!-- Main content container -->
+  <div class="row justify-content-center"> <!-- Row for layout -->
+    <!-- Left column with contact information -->
+    <div class="shadow p-5 bg-body col-sm-4" style="--bs-bg-opacity: .25;">
+      <h3><i class="fa-solid fa-envelope"></i>EMAIL US</h3>
+      <p>Manager@PHOTOMEAL.com</p>
+      <h3><i class="fa-solid fa-location-dot"></i>LOCATION</h3>
+      <p>250 E Tasman Dr</p>
+      <p>San Jose, CA 95134, USA</p>
+      <h3><i class="fa-solid fa-clock"></i>BUSINESS HOURS</h3>
+      <p>MONDAY-FRIDAY 7:30-16:30</p>
+    </div>
+
+    <!-- Right column with contact form -->
+    <div class="shadow p-5 bg-body col-sm-4" style="--bs-bg-opacity: .5;">
+      <form class="py-5 shadow p-4" >
+        <h1 class="text-black mb-5">CONTACT US</h1>
+        <div class="mb-5">
+          <input type="text" class="form-control" placeholder="Enter your Name">
+        </div>
+        <div class="mb-5">
+          <input type="email" class="form-control" placeholder="Enter your email address">
+        </div>
+        <div class="mb-5">
+          <textarea class="form-control" rows="4" cols="50"></textarea>
+        </div>
+
+        <div class="mb-3 d-flex">
+          <div class="button-contact">
+            <button type="submit" class="button-contact">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JavaScript bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- Font Awesome JavaScript -->
+<script src="https://kit.fontawesome.com/68f91bbbdc.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
